@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('status', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('status', 50)->unique();
+            $table->string('nome', 50)->unique();
             $table->timestamp("criado_em");
             $table->timestamp("atualizado_em");
         });
