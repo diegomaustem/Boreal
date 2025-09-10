@@ -12,6 +12,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('nome', 100);
             $table->string('descricao', 250)->nullable();
+            $table->integer('capacidade_max');
             $table->timestamp("criado_em");
             $table->timestamp("atualizado_em");
         });
