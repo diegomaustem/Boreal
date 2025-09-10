@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\Permissao;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class PermissaoSeeder extends Seeder
 {
