@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\App;
+
 return [
 
     /*
@@ -40,7 +42,15 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'api' => [
+            'driver' => 'jwt',
+            'provider' => 'usuarios',
+            'hash' => false,
+        ],
     ],
+
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -60,15 +70,15 @@ return [
     */
 
     'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
-        ],
-
         // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
+        //     'driver' => 'eloquent',
+        //     'model' => env('AUTH_MODEL', App\Models\User::class),
         // ],
+
+        'usuarios' => [
+            'driver' => 'eloquent',
+            'model' => \App\Models\Usuario::class,
+        ],
     ],
 
     /*
